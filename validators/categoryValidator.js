@@ -1,0 +1,9 @@
+export function validateCategory(req, res, next) {
+  if (!req.body.name) {
+    return res.status(400).json({
+      message: "Name required",
+    });
+  }
+
+  next();
+}
